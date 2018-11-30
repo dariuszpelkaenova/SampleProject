@@ -1,0 +1,20 @@
+﻿@model SampleWebApp.Models.Company
+@{
+    ViewData["Title"] = "AddNewCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dodaj nową firmę</h2>
+
+@using (Html.BeginForm("EditCompany", "Company", FormMethod.Post,
+                                     new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </fieldset>
+
+    <button>Zapisz</button>
+}
