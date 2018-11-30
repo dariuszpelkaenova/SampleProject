@@ -9,11 +9,6 @@ namespace SampleWebApp.Controllers
 {
     public class CompanyController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult AddNewCompany()
         {

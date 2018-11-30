@@ -1,10 +1,10 @@
 ﻿@model SampleWebApp.Models.Company
 @{
-    ViewData["Title"] = "AddNewCompany";
+    ViewData["Title"] = "Edycja danych firmy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Dodaj nową firmę</h2>
+<h2>Edycja danych firmy</h2>
 
 @using (Html.BeginForm("EditCompany", "Company", FormMethod.Post,
                                      new { enctype = "multipart/form-data" }))
