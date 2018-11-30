@@ -25,5 +25,17 @@ namespace SampleWebApp.Controllers
         {
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult EditEmployee()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EditEmployee(Employee model)
+        {
+            return View(model);
+        }
     }
 }

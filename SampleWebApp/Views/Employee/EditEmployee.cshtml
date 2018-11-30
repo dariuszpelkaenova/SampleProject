@@ -1,0 +1,32 @@
+﻿@model SampleWebApp.Models.Employee
+@{
+    ViewData["Title"] = "Edycja danych pracownika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edycja danych pracownika</h2>
+
+@using (Html.BeginForm("EditEmployee", "Employee", FormMethod.Post,
+                                   new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.Role)
+            @Html.TextBoxFor(m => m.Role)
+        </div>
+    </fieldset>
+
+    <button>Zapisz</button>
+}
