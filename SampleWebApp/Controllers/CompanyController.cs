@@ -25,7 +25,7 @@ namespace SampleWebApp.Controllers
         public IActionResult EditCompany(int companyId)
         {
             Company model = new Company();
-            model.Name = "jakieś dane";
+            model.Name = "jakieś dane ";
             return View(model);
         }
 
